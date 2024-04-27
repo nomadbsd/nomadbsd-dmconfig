@@ -73,8 +73,7 @@ private:
 		msgBox.setWindowIcon(msgBox.iconPixmap());
 		QPushButton *leave = msgBox.addButton(tr("Quit"),
 		    QMessageBox::ActionRole);
-		msgBox.setStandardButtons(QMessageBox::Cancel);
-		msgBox.setButtonText(QMessageBox::Cancel, tr("Cancel"));
+		msgBox.addButton(tr("Cancel"), QMessageBox::RejectRole);
 		msgBox.exec();
 		if (msgBox.clickedButton() == leave)
 			std::exit(0);

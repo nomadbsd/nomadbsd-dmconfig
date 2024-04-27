@@ -1,0 +1,8 @@
+#ifndef DEFS_H
+#define DEFS_H
+#define PROGRAM "@CMAKE_PROJECT_NAME@"
+#define PATH_BACKEND "@PATH_BACKEND@"
+#define PATH_SLIM_THEME_DIR "@PATH_SLIM_THEME_DIR@"
+#define PATH_SDDM_THEME_DIR "@PATH_SDDM_THEME_DIR@"
+#endif /* !DEFS_H */
+

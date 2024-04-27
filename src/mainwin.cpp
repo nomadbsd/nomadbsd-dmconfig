@@ -27,6 +27,7 @@
 #include <QProcess>
 #include <QDebug>
 
+#include "defs.h"
 #include "mainwin.h"
 #include "qt-helper/qt-helper.h"
 
@@ -137,7 +138,7 @@ MainWin::quit()
 	    saved_username  == cfg_username  &&
 	    saved_autologin == cfg_autologin &&
 	    saved_session   == cfg_session)
-		QApplication::quit();
+		std::exit(0);
 	msgBox.setWindowModality(Qt::WindowModal);
 	msgBox.setText(tr("The file has been modified."));
 	msgBox.setWindowTitle(tr("The file has been modified."));
@@ -158,7 +159,7 @@ MainWin::quit()
 	case QMessageBox::Save:
 		save();
 	case QMessageBox::Discard:
-		QApplication::quit();
+		std::exit(0);
 	}
 }
 
@@ -318,7 +319,7 @@ MainWin::querySettings()
 	QByteArray  line;
 
   	proc.setReadChannel(QProcess::StandardOutput);
-	proc.start(PATH_BACKEND" -q");
+	proc.startCommand(PATH_BACKEND" -q");
 	(void)proc.waitForStarted(-1);
 
 	//
