@@ -21,9 +21,22 @@ set(SOURCE_FILES src/backend.h src/main.cpp src/mainwin.cpp src/mainwin.h
 find_package(Qt6 REQUIRED COMPONENTS Widgets LinguistTools)
 qt_standard_project_setup()
 
-set(TS_FILES
-    locale/${PROGRAM}_cs.ts locale/${PROGRAM}_de.ts locale/${PROGRAM}_fr.ts
-    locale/${PROGRAM}_id.ts locale/${PROGRAM}_ru.ts)
+set(TS_FILES locale/${PROGRAM}_ar.ts
+             locale/${PROGRAM}_de.ts
+             locale/${PROGRAM}_es.ts
+             locale/${PROGRAM}_fr.ts
+             locale/${PROGRAM}_hi.ts
+             locale/${PROGRAM}_hu.ts
+             locale/${PROGRAM}_id.ts
+             locale/${PROGRAM}_it.ts
+             locale/${PROGRAM}_ja.ts
+             locale/${PROGRAM}_ko.ts
+             locale/${PROGRAM}_pl.ts
+             locale/${PROGRAM}_pt.ts
+             locale/${PROGRAM}_ru.ts
+             locale/${PROGRAM}_tr.ts
+             locale/${PROGRAM}_uk.ts
+             locale/${PROGRAM}_zh.ts)
 
 add_executable(nomadbsd-dmconfig-gui ${SOURCE_FILES})
 
